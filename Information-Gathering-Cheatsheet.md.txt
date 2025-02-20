@@ -1,0 +1,48 @@
+# Information Gathering Cheat Sheet
+
+## Passive Information Gathering
+
+### WHOIS Lookup
+- `whois example.com`
+- Online tool: [whois.domaintools.com](https://whois.domaintools.com)
+
+### DNS Enumeration
+- `nslookup example.com`
+- `dig example.com ANY`
+- `host -t ns example.com`
+- `dnsrecon -d example.com`
+
+### Metadata Extraction
+- `exiftool file.jpg`
+- `strings document.pdf`
+
+### Social Media OSINT
+- [OSINT Framework](https://osintframework.com/)
+- [Google Dorking](https://www.exploit-db.com/google-hacking-database)
+- `site:linkedin.com "Company Name"`
+
+---
+
+## Active Information Gathering
+
+### Port Scanning
+- `nmap -sV -p- example.com`
+- `masscan -p1-65535 --rate=1000 example.com`
+
+### Web Enumeration
+- `gobuster dir -u http://example.com -w /path/to/wordlist.txt`
+- `whatweb example.com`
+
+### Subdomain Enumeration
+- `subfinder -d example.com`
+- `amass enum -d example.com`
+
+### Email Harvesting
+- `theHarvester -d example.com -b google`
+
+---
+
+## Useful Tools
+- [Maltego](https://www.maltego.com/)
+- [Shodan](https://www.shodan.io/)
+- [SpiderFoot](https://www.spiderfoot.net/)
